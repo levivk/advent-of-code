@@ -6,8 +6,8 @@ with open('day12_in.txt') as f:
 
 out = list(range(26))
 l2n = dict(zip(string.ascii_lowercase, range(26)))
-l2n['S'] = -1 #type:ignore
-l2n['E'] = 26 #type:ignore
+l2n['S'] = -1 
+l2n['E'] = 26 
 squares = [list(l.strip()) for l in lines]
 squares = [[l2n[c] for c in s] for s in squares]
 
