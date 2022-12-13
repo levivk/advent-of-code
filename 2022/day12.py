@@ -6,6 +6,7 @@ with open('day12_in.txt') as f:
 
 out = list(range(26))
 l2n = dict(zip(string.ascii_lowercase, range(26)))
+# I realized after finishing the puzzle that the following should be 0 and 25
 l2n['S'] = -1 
 l2n['E'] = 26 
 squares = [list(l.strip()) for l in lines]
@@ -50,7 +51,7 @@ for i in range(len(squares)):
 
 # print(G.edges())
 # part a
-path = nx.shortest_path(G, start, end)
+# path = nx.shortest_path(G, start, end)
 # print(path)
 # print(len(path)-1)
 
