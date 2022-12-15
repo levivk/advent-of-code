@@ -20,7 +20,6 @@ minx = min([s[0] - sensor_dist[s] for s,_ in sb])
 maxx = max([s[0] + sensor_dist[s] for s,_ in sb])
 beacons = set([b for _,b in sb])
 sensors = set([s for s,_ in sb])
-blocked = {s:set() for s,_ in sb}
 print(minx, maxx)
 
 def p1():
@@ -33,16 +32,6 @@ def p1():
         if any([distance(c,s) <= sensor_dist[s] for s,_ in sb]) and c not in beacons:
             no_beacons += 1
 
-    #     for s in blocked:
-    #         if distance(c,s) <= sensor_dist[s]:
-    #             blocked[s].add(c)
-
-    # all_blocked = set()
-    # for s in blocked:
-    #     print(s, sensor_dist[s], len(blocked[s]))
-    #     all_blocked.update(blocked[s])
-    # all_blocked.difference_update(beacons)
-    # print(len(all_blocked))
     print(no_beacons)
 
 def p2():
@@ -83,8 +72,6 @@ def p2():
                 tried += 1
             if tried % 100000 == 0:
                 print(tried)
-
-    print("damit")
 
 # p1()
 p2()
