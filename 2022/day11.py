@@ -5,17 +5,15 @@
 from tqdm import tqdm
 
 class monkey():
-    # takes old worry, returns new
-    operation = None
-    # takes worry, returns monkey
-    test = None
-    inspected = 0
 
     def __init__(self, i, o, t):
         self.items = i
+        # takes old worry, returns new
         self.operation = o
+        # takes worry, returns monkey
         self.test = t
         self.thrown_to = []
+        self.inspected = 0
         
 
 m0 = monkey(
